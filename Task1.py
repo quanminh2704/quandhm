@@ -16,7 +16,6 @@ while file_name_check:
         file_name_check = False
     else:
         print('Successfully opened', file_name + '.txt')
-        break
-    finally:
-        print('*'*10)
+        print('*'*10,'ANALYZING','*'*10)
         print('No errors found')
+        break
