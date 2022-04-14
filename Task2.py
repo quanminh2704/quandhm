@@ -1,5 +1,4 @@
 
-from itertools import count
 import pandas as pd
 import numpy as np
 ##Task 1
@@ -25,8 +24,10 @@ count_invalid = 0
 array_valid = []
 array_invalid = []
 array_invalid_id = []
+
 for i in range(len(file_1)):
-    if len(file_1[i].split(',')[0]) == 9:
+    file_1_len = file_1[i].split(',')
+    if len(file_1_len[0]) == 9 and file_1_len[0][1:len(file_1_len[0])].isnumeric():
         if len(file_1[i].split(',')) == 26:
             array_valid.append(file_1[i])
             count_valid += 1
